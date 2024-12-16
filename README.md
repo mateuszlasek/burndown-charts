@@ -66,3 +66,7 @@ The **Burndown Charts** application provides a clear and dynamic way to visualiz
 5. **Share Insights**:
 
    - Export charts as images or share a link with team members.
+---
+![home screen](image2.png)
+![burndown chart](image.png)
+
