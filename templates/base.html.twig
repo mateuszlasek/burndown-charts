@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+
+    {# Ładowanie stylów z Webpack Encore - obsługuje kompilację CSS/LESS/SCSS itp. #}
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }} <!-- Załaduj plik CSS wygenerowany przez Webpack Encore -->
+    {% endblock %}
+</head>
+<body>
+{# Blok nagłówka, można go nadpisać w konkretnych szablonach #}
+{% block header %}{% endblock %}
+
+{# Blok głównej treści, może być nadpisany w szablonach #}
+{% block body %}{% endblock %}
+
+{# Blok stopki, może być nadpisany w szablonach #}
+{% block footer %}{% endblock %}
+
+{# Ładowanie skryptów JS z Webpack Encore #}
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}
+</body>
+</html>

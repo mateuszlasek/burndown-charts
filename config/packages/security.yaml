@@ -1,0 +1,29 @@
+security:
+    password_hashers:
+        Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
+
+    providers:
+        # Zmieniamy to na provider, który pobiera użytkowników z bazy danych
+        users_in_database:
+            entity:
+                class: App\Entity\Api\User  # Zastąp tym klasą encji użytkownika
+                property: username       # Wskazuje na właściwość, która jest używana jako login (np. 'username')
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            lazy: true
+            provider: users_in_database  # Zmieniamy na nasz nowy provider
+
+            form_login:
+                login_path: app_login
+                check_path: app_login
+                username_parameter: login[username]  # Używamy login[username], aby pasowało do przesyłanych danych
+                password_parameter: login[password]  # Używamy login[password], aby pasowało do przesyłanych danych
+                enable_csrf: true
+                default_target_path: /
+            logout:
+                path: app_logout
+                target: /  # Redirect after logout
