@@ -4,18 +4,6 @@ Burndown Charts is a project developed during an internship to visualize project
 
 ---
 
-## Table of Contents
-
-- [About the Project](#about-the-project)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
----
-
 ## About the Project
 
 The **Burndown Charts** application provides a clear and dynamic way to visualize progress over time. It allows teams to monitor how much work remains and compare it to the projected timeline. This project was a collaborative effort between interns, focusing on enhancing skills in project management, data visualization, and teamwork.
