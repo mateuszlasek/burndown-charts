@@ -35,7 +35,7 @@ The **Burndown Charts** application provides a clear and dynamic way to visualiz
 - **Backend**: Symfony
 - **Testing**: PHPUnit
 - **Version Control**: Git, GitHub
-- **Other Tools**: Docker (optional for deployment)
+- **Other Tools**: Docker
 
 ---
 
